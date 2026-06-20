@@ -138,9 +138,7 @@ const ConfirmBookingPage = () => {
                 {/* Movie Section */}
                 <div className="relative lg:flex-[1.4] min-h-[400px] lg:min-h-[750px] rounded-2xl overflow-hidden shadow-xl">
                     <img
-                        // src="https://www.movieposters.com/cdn/shop/files/backtofuture.mpw.jpg?v=1762467212&width=1680"
-                        src={eventDetail?.images[0] || "https://www.movieposters.com/cdn/shop/products/857805fc819baf858faad8cf6430be97_137b9671-5707-440b-ba63-e79dc6362497.jpg?v=1762500827&width=1680"}
-                        // "https://www.movieposters.com/cdn/shop/products/857805fc819baf858faad8cf6430be97_137b9671-5707-440b-ba63-e79dc6362497.jpg?v=1762500827&width=1680"
+                        src={eventDetail?.images[0] || "https://www.shutterstock.com/image-vector/cinema-film-strip-wave-reel-600w-1422026513.jpg"}
                         alt={eventDetail?.name || "movie poster"}
                         className="absolute inset-0 w-full h-full object-cover"
                     />
