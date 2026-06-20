@@ -1,3 +1,14 @@
+
+
+> **Note**
+>
+> For better separation of concerns and deployment flexibility, the backend has been maintained in a **separate repository** from the frontend.
+>
+> This allows the frontend and backend to be developed, deployed, and scaled independently while keeping the codebase easier to maintain.
+>
+> **Backend Repository:**
+> https://github.com/bharat0770/event_booking_backend
+
 # Architecture Overview
 
 This application follows a **clean client-server architecture** with clear separation between frontend, backend, and database.
