@@ -23,7 +23,7 @@ const EventDetails = () => {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const res = await axios.post("http://localhost:3000/api/v1/seat/list/all", {
+                const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/seat/list/all`, {
                     eventId: id
                 },
                     {
@@ -72,7 +72,7 @@ const EventDetails = () => {
             seatsId.push(i._id);
         })
   
-        const res = await axios.post("http://localhost:3000/api/v1/reservation/create", {
+        const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/reservation/create`, {
             userId: userId,
             eventId: id,
             seatIds: [...seatsId],

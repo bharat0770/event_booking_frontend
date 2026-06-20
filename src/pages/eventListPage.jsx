@@ -31,7 +31,7 @@ const EventListPage = () => {
     }
     const fetchdata = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/event/all", {
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/event/all`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

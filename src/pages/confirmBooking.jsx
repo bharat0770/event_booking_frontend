@@ -22,12 +22,12 @@ const ConfirmBookingPage = () => {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const reservationResponse = await axios.post("http://localhost:3000/api/v1/reservation/detail", { reservationId: reservationId }, {
+                const reservationResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/reservation/detail`, { reservationId: reservationId }, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 });
-                const eventDetailresponse = await axios.get(`http://localhost:3000/api/v1/event/${eventId}`, {
+                const eventDetailresponse = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/event/${eventId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -112,7 +112,7 @@ const ConfirmBookingPage = () => {
         }
 
         if (reservationId) {
-            const bookingdetails = await axios.post("http://localhost:3000/api/v1/reservation/booking/confirm", {
+            const bookingdetails = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/reservation/booking/confirm`, {
                 reservationId
             },
                 {
